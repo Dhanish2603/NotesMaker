@@ -10,6 +10,7 @@ addBtn.addEventListener("click", function () {
         notesObj = JSON.parse(notes);
     }
     notesObj.push(addTxt.value);
+    addTxt.value="";
     localStorage.setItem("notes", JSON.stringify(notesObj));
     console.log(notesObj)
     shownotes();
